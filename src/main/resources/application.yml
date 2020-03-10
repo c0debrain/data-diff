@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: "local"
+
+---
+
+spring:
+  profiles: local
+amazon:
+  aws:
+    accesskey: 111
+    secretkey: 222
+  dynamodb:
+    endpoint: http://localhost:8000/
+
+---
+
+spring:
+  profiles: test
+amazon:
+  aws:
+    accesskey: 111
+    secretkey: 222
+  dynamodb:
+    endpoint: http://localhost:8000/
+
+---
+
+spring:
+  profiles: prod
